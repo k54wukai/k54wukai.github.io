@@ -1,0 +1,126 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+}
+
+.container {
+  max-width: 980px;
+  margin: auto;
+  padding: 2.2449%;
+}
+
+.projects {
+  list-style: none;
+  padding: 0;
+  margin: 0 -2.2449%;
+  position: relative;
+  font-size: 0;
+  overflow: hidden;
+}
+.projects li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 45px 2.2449% 0 2.34694%;
+  width: 20.40816%;
+}
+.projects a {
+  text-decoration: none;
+  color: #888;
+  display: block;
+  font-size: 16px;
+}
+.projects a img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.projects .project-label { /*this is just the Project Lable*/
+  display: block;
+  margin: 5px 0 10px;
+}
+.projects .current a {
+  color: red;
+}
+.projects .current a:after {
+  content: "project description";
+  display: table;
+  border: 10px solid;
+  border-top: none;
+  border-color: #333 transparent;
+  margin: auto;
+}
+.projects .current a img, .projects .current a .project-label {
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.projects .current a .project-label {
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+}
+.projects h3 {
+  font-size: 16px;
+}
+.projects .details {
+  font-size: 16px;
+  display: none;
+  position: absolute;
+  background: #444;
+  box-shadow: inset 0 10px 20px 5px #333;
+  color: #ddd;
+  right: 2.2449%;
+  left: 2.2449%;
+  padding: 20px;
+  overflow: hidden;
+}
+.projects .details img {
+  float: right;
+  margin-left: 20px;
+margin-bottom: 20px;
+  width: 53.19149%;
+  height: auto;
+}
+.projects .details .text {
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 735px) {
+  .container {
+    padding: 2.9932%;
+  }
+
+  .projects {
+    margin: 0 -2.9932%;
+  }
+  .projects li {
+    margin: 45px 2.9932% 0 3.12925%;
+    width: 27.21088%;
+  }
+}
+@media only screen and (max-width: 490px) {
+  .container {
+    padding: 4.4898%;
+  }
+
+  .projects {
+    margin: 0 -4.4898%;
+  }
+  .projects li {
+    margin: 45px 4.4898% 0 4.69388%;
+    width: 40.81633%;
+  }
+  .projects .details img {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+}

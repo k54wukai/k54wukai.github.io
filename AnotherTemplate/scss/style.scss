@@ -1,0 +1,123 @@
+@import "compass/css3";
+
+* {
+  @include box-sizing(border-box);
+}
+html {
+  overflow: -moz-scrollbars-vertical; 
+  overflow-y: scroll;
+}
+.container {
+  max-width: 980px;
+  margin: auto; 
+  padding: percentage(22px/980px);
+}
+.projects {
+  & {
+    list-style: none;
+    padding: 0;
+    margin: 0 -1*percentage(22px/980px); 
+    position: relative;
+    font-size: 0;
+    overflow: hidden;
+  }
+  li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 45px percentage(22px/980px) 0 percentage(23px/980px); 
+    width: percentage(200px/980px);
+  }
+  a {
+    text-decoration: none;
+    color: #888;
+    display: block;
+    font-size: 16px;
+    
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto !important;
+    }
+  }
+  
+  .project-label {
+    display: block;
+    margin: 5px 0 10px;
+  }
+  .current a{
+    color: #000;
+    &:after {
+      content: "";
+      display: table;
+      border: 10px solid;
+      border-top: none;
+      border-color: #333 transparent;
+      margin: auto;
+    }
+    img, .project-label {
+      @include transform(scale(1.1));
+    }
+    .project-label {
+      @include transform(translateY(10px));
+    }
+  }
+  h3 {
+    font-size: 16px;
+  }
+
+  .details {
+    font-size: 16px;
+    display: none;
+    position: absolute;
+    background: #444;
+    box-shadow: inset 0 10px 20px 5px #333;
+    color: #ddd;
+    right: percentage(22px/980px);
+    left: percentage(22px/980px);
+    padding: 20px;
+    img {
+      float: right;
+      margin-left: 20px;
+      width: percentage(500px/940px);
+      height: auto;
+    }
+    .text {
+      overflow: hidden;
+    }
+     overflow: hidden;
+  }
+  .current .details {
+    //display: block;
+  }
+}
+@media only screen and (max-width: 735px) {
+  .container {
+    padding: percentage(22px/735px);
+  }
+  .projects {
+    margin: 0 -1*percentage(22px/735px); 
+    li {
+      margin: 45px percentage(22px/735px) 0 percentage(23px/735px); 
+      width: percentage(200px/735px);
+    }
+  }
+}
+@media only screen and (max-width: 490px) {
+  .container {
+    padding: percentage(22px/490px);
+  }
+  .projects {
+    margin: 0 -1*percentage(22px/490px); 
+    li {
+      margin: 45px percentage(22px/490px) 0 percentage(23px/490px); 
+      width: percentage(200px/490px); 
+    }
+    .details {
+      img {
+        float: none;
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+}
