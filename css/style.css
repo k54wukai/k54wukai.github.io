@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; color: fuchsia; }
   
 /*--- HOME ---*/
 #home {
-  background: url('http://s17.postimg.org/m4bfqfgn3/fog_1005445_1920.jpg') no-repeat center center fixed;
+  background: url('https://wallpaperscraft.com/image/danboard_family_walk_cardboard_robot_54711_1280x960.jpg') no-repeat center center fixed;
   background-size: cover; text-shadow: 1px 1px 0 rgba(255,255,255,0.5); text-align: center;
 }
 #home h1 { font-family: 'Advent Pro', sans-serif; font-size: 96px; color: #000; display: inline-block; margin: 0; padding: 0; line-height: 90px; margin-top: 60px; }
